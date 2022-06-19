@@ -1,0 +1,6 @@
+FROM node:18-bullseye-slim
+WORKDIR /opt/hellowordserver
+COPY . .
+ENV channel=1000
+RUN npm install
+CMD [ "node","server.js" ]
